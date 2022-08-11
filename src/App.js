@@ -4,6 +4,7 @@ import './stylecss/common/index.scss'
 import Header from './component/commonUI/header'
 import SliderHomepage from './component/commonUI/homepage/silder'
 import CategoryBrands from './component/commonUI/homepage/category'
+import HPjsTab from './component/commonUI/homepage/hp_section-three'
 import CategreaterfourStar from './component/commonUI/homepage/productGreaterfourstar'
 import dataJson from './data.json'
 
@@ -16,6 +17,7 @@ function App() {
       <main class="page">
         <CategoryBrands />
         <CategreaterfourStar />
+        <HPjsTab />
       </main>
     </div >
   );

@@ -23,7 +23,7 @@ function CategoryBrands() {
         <div className='hp_category-brands'>
             <div className="container-fluid">
                 <h3 className="hp_cate-title"><span>DANH MỤC HÔM NAY</span></h3>
-                <div className="row">
+                <div className="row hp_pad-comm">
                     <Swiper
 
                         modules={[Grid, Navigation, Pagination]}

@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Svn-gilroy-bold";
+    src: local("SvnBold"),
+        url("./fonts/SVN-Gilroy-Bold.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "Svn-gilroy-Semibold";
+    src: local("SvnBold"),
+        url("./fonts/SVN-Gilroy\ SemiBold.otf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "Svn-gilroy-Semibold-Italic";
+    src: local("SvnBold"),
+        url("./fonts/SVN-Gilroy\ SemiBold\ Italic.otf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "Svn-gilroy-medium";
+    src: local("SvnBold"),
+        url("./fonts/SVN-Gilroy-Medium.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "Svn-gilroy-regular";
+    src: local("SvnBold"),
+        url("./fonts/SVN-Gilroy-Regular.ttf") format("truetype");
+
+}
