@@ -14,7 +14,7 @@ function SliderHomepage() {
     const list = []
 
     for (var i = 1; i <= 3; i++) {
-        list.push(<SwiperSlide><img src={process.env.PUBLIC_URL + `/banner${i}.png`} /></SwiperSlide>)
+        list.push(<SwiperSlide key={i}><img src={process.env.PUBLIC_URL + `/banner${i}.png`} /></SwiperSlide>)
     }
     return (
         <div className="SlideHome">
@@ -24,8 +24,8 @@ function SliderHomepage() {
                 slidesPerView={1}
                 rewind={true}
                 navigation={true}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                /*onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}*/
                 className="mySwiper"
             >
                 {list}

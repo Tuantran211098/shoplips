@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import 'swiper/css/navigation';
 import axios from 'axios';
 import { Navigation, Grid, Pagination, Scrollbar, A11y } from 'swiper';
 import ProductLoop from '../../loopProduct/index'

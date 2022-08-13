@@ -5,8 +5,8 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import axios from 'axios';
 import { Navigation, Grid, Pagination, Scrollbar, A11y } from 'swiper';
-import ProductLoop from '../../loopProduct/index'
 import { Animated } from "react-animated-css";
+import ProductLoop from '../../loopProduct';
 function HPjsTab() {
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -32,7 +32,7 @@ function HPjsTab() {
                     <div className='hp_jstab-content'>
                         <div class="tab-wrap">
                             <input type="radio" id="tab1" name="tabGroup1" class="tab" checked />
-                            <label for="tab1">Short</label>
+                            <label for="tab1">Lip stick</label>
 
                             <input type="radio" id="tab2" name="tabGroup1" class="tab" />
                             <label for="tab2">Medium</label>
@@ -41,8 +41,7 @@ function HPjsTab() {
                             <label for="tab3">Long</label>
 
                             <div class="tab__content">
-                                <h3>Short Section</h3>
-                                <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                                <ProductLoop passdata={data} />
                             </div>
 
                             <div class="tab__content">

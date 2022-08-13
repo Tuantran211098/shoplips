@@ -109,7 +109,7 @@
 
 @media (min-width:992px) {
     .hp_category-brands .swiper-slide {
-        width: 100px% !important;
+        /*width: 100px% !important;*/
     }
 }
 
