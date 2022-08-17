@@ -1,22 +1,26 @@
+/* eslint-disable no-restricted-globals */
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
+import $ from "jquery";
 import axios from 'axios';
 import { Navigation, Grid, Pagination, Scrollbar, A11y } from 'swiper';
 import { Animated } from "react-animated-css";
 function ProductLoop({ passdata }) {
     /*const { data } = this.props;*/
-    console.log('passdata', passdata);
+    /* console.log('passdata', passdata);*/
+    const [isTrueImg, setIsTrueImg] = useState(false);
     const loopProduct = passdata.slice(0, 20).map((item, index) => {
 
         const rating = Math.floor(item.rating);
         const tags = item.tag_list;
         const loopStar = [];
         const tagsList = [];
-        const checkImageExist = "";
+        var ImageLink = item.image_link;
+        var checkImageExist = "http://www.dunstableroadrunners.org/wp-content/uploads/2019/04/image-coming-soon.jpg";
         const parseUrl = item.name.replace(/\s/g, "-").toLowerCase();
         for (var i = 1; i <= rating; i++) {
             loopStar.push(<i class="fa fa-star" key={i}></i>);
@@ -24,20 +28,12 @@ function ProductLoop({ passdata }) {
         for (var i = 0; i < tags.length; i++) {
             tagsList.push(<span key={i} className="hp_itemstar-info-tags">{tags[i]}</span>);
         }
-        axios.get(item.image_link).then((response) => {
-            if (response.status) {
-
-            }
-        }).catch((error) => {
-            console.log(error)
-        })
-        /* console.log(tagsList);*/
         return (
             <SwiperSlide key={index}>
                 <div className=' hp_cate_itemstar' key={index}>
                     <div className='hp_itemstar-img '>
                         <a href={`./products/${parseUrl}`}>
-                            <img src={item.image_link} alt={item.brand} />
+                            <img src={item.image_link} alt={item.brand} key={index} />
                         </a>
                     </div>
                     <div className='hp_itemstar-info'>
